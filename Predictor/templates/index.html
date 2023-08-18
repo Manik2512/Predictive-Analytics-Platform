@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block title %}HOME{% endblock title %}
+
+{% block body %}
+<div class="container-fluid" my-50 px-7>
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Example Code -->
+    
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.iberdrola.com/documents/20125/40921/machine_learning_746x419.jpg/15ff7571-4cfc-d9f0-5ef4-9c2e9306ad88?t=1627968463400" width="400" height="700" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color: Black;">WEB APPLICATION</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://venturebeat.com/wp-content/uploads/2021/11/Abstract-AI-4-color-e1638226936634.jpg?w=1200&strip=all" width="400" height="700" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color: White;">MACHINE LEARNING</h1>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.ceralytics.com/wp-content/uploads/2019/08/machine-learning-featured.jpg" width="1000" height="700" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p>.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <h1 class="my-4 text-center">PREDICT FROM BELOW USE CASES </h1>
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">Find out real mileage of your car by our Prediction Model.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="/predict1" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <small class="text-body-secondary">70-75% Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="data:image/png;base64,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" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">Find out whether you will get placed in Campus Placement or not. </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="/predict" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <small class="text-body-secondary">85-88% Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=2000" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">NEW Use case in development. Will Launch soon, till then try other use cases.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                  </div>
+                  <small class="text-body-secondary">---Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=2000" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">NEW Use case in development. Will Launch soon, till then try other use cases.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                    <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                  </div>
+                  <small class="text-body-secondary">----Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=2000" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">NEW Use case in development. Will Launch soon, till then try other use cases.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                    <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                  </div>
+                  <small class="text-body-secondary">----Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=2000" width="400" height="250" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <p class="card-text">NEW Use case in development. Will Launch soon, till then try other use cases.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a  href="" button type="button" class="btn btn-sm btn-outline-secondary">Load Model</a>
+                    <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                  </div>
+                  <small class="text-body-secondary">----Accurate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+{% endblock body %}
+

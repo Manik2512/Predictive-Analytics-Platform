@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}ABOUT{% endblock title %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        .header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .member {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .member.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .member h1 {
+            margin: 5px 0;
+            font-size: 38px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Team Members</h2>
+        </div>
+        <div class="member">
+            <h1>SAUMYA - 20csu211</h1>
+        </div>
+        <div class="member">
+            <h1>MANIK - 20csu250</h1>
+        </div>
+        <div class="member">
+            <h1>MEETALI - 20csu218</h1>
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const members = document.querySelectorAll('.member');
+            members.forEach((member, index) => {
+                setTimeout(() => {
+                    member.classList.add('show');
+                }, index * 200); // Adjust the delay as needed
+            });
+        });
+    </script>
+</body>
+</html>
+
+{% endblock body %}

@@ -1,0 +1,426 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF=8">
+	<title> Placement Predictor</title>
+	<link rel="shortcut icon" type="x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2I3SqaRE4oUWY2NAZbVv59D4-0X7bWZjpKg&usqp=CAU">
+	<style>
+		* {
+			border-collapse: separate;
+		}
+
+		.main {
+			position: absolute;
+			top: 1px;
+			right: 15%;
+			width: 800px;
+			background-color: rgb(167, 167, 167);
+			border-radius: 10px;
+			align-items: center;
+			height: 110vh;
+			border: 1.5px solid rgb(0, 0, 0);
+
+		}
+
+		.menu-bar .table {
+			margin-left: 500px;
+
+		}
+
+		h1 {
+			font-family: Times New Roman;
+			margin: 20px, 0;
+			color: rgb(18, 17, 17);
+			font-size: 50px;
+			font-weight: lighter;
+			animation-delay: 3.5s;
+			font-style: italic;
+		}
+
+		input[type=submit] {
+			background-color: rgb(127, 216, 131);
+			border: 1px solid black;
+			color: rgb(23, 22, 22);
+			padding: 10px 16px;
+			cursor: pointer;
+			margin-top: 15px;
+			border-radius: 10px;
+		}
+
+		input {
+			padding: 20px, 0;
+			margin: 20px, 0;
+		}
+
+		input:hover {
+			color: rgb(127, 216, 131);
+			background-color: rgb(23, 22, 22);
+			;
+		}
+
+		p {
+			color: #cdcdcd;
+		}
+
+		.row em {
+			color: rgb(9, 16, 225);
+			font-weight: bolder;
+			font-style: italic;
+            font-size: 40px;
+		}
+
+		.main .bold {
+			font-style: italic;
+            font-size: 40px;
+		}
+
+		.wrapper .predict {
+			font-weight: bold;
+            font-size: 35px;
+
+		}
+
+		.logo .title {
+			font-size: 35px;
+			margin-left: 10%;
+            font-family: Arial;
+		}
+
+		.gfg {
+			color: blue;
+            font-family: Arial;
+			font-weight: bold;
+		}
+
+		.bold {
+			font-size: 17px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+        <a class="navbar-brand" href="/">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">CONTACT US</a>
+            </li> 
+          </ul>
+          
+        </div>
+      </div>
+
+	<div class="wrapper">
+		<div class="top-bar">
+			<div class="logo">
+				<br><br><br> <br><br><br><br><br>
+
+				<span class="title"><strong> Input Parameters for </strong> Gender</span><br>
+				<span class="title"> Male: 0</span><br>
+				<span class="title"> Female: 1</span><br></br>
+				<br>
+				<span class="title"><strong>Input Parameters for </strong> Stream</span><br>
+				<span class="title"> Electrical And Communication: 0</span><br>
+				<span class="title"> Computer Science: 1</span><br>
+				<span class="title"> Information Technology: 2</span><br>
+				<span class="title"> Mechanical: 3</span><br>
+				<span class="title"> Electrical: 4</span><br>
+				<span class="title"> Civil: 5</span><br> </br> <br>
+				<span class="title"> <strong> Input Parameters for staying</strong> </span><br>
+				<span class="title">Living in Hostel: 1</span><br>
+				<span class="title">Not Living in Hostel: 0</span><br> </br> <br>
+                <span class="title"> <strong> YES / NO Questions:</strong> </span><br>
+				<span class="title">YES: 1</span><br>
+				<span class="title">NO: 0</span><br>
+
+			</div>
+			<div class="menu-bar">
+
+			</div>
+
+
+		</div>
+
+		
+		<div align='center' class="main">
+			<h1 class="gfg">Placement Predictor</h1>
+			<h1>DON'T TAKE THIS PREDICTION SERIOUSLY</h1> <br />
+			<h1>STUDY HARD</h1> <br />
+			<form action="result">
+				<table>
+					<tr>
+						<td align="right"><span class="bold">Specify Age:</span></td>
+						<td align="left"><input type="text" name="n1"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Specify Gender:</span></td>
+						<td align="left"><input type="text" name="n2"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Your Main Stream:</span></td>
+						<td align="left"><input type="text" name="n3"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Did any Internships?(yes/no)</span></td>
+						<td align="left"><input type="text" name="n4"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">CGPA (Round Off):</span></td>
+						<td align="left"><input type="text" name="n5"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Live in Hostal?:(yes/no)</span></td>
+						<td align="left"><input type="text" name="n6"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Backlog History:(yes/no)</span></td>
+						<td align="left"><input type="text" name="n7"></td>
+					</tr>
+
+				</table>
+				<br>
+				<input class="predict" type="submit" value="PREDICT">
+			</form>
+			<div class="row">
+				<h2><em>{{result2}}</em></h2>
+			</div>
+		</div>
+</body>
+
+</html>
+-->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Placement Predictor</title>
+	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2I3SqaRE4oUWY2NAZbVv59D4-0X7bWZjpKg&usqp=CAU">
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			margin: 0 auto;
+			padding: 20px;
+			max-width: 1200px;
+		}
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 40px;
+			margin-right: 10px;
+		}
+
+		.nav {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav li {
+			margin-right: 20px;
+		}
+
+		.nav li:last-child {
+			margin-right: 0;
+		}
+
+		.nav a {
+			text-decoration: none;
+			color: #333;
+			transition: color 0.3s ease;
+		}
+
+		.nav a:hover {
+			color: #007bff;
+		}
+
+		.main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		h1, h2 {
+			font-family: "Times New Roman", serif;
+			color: #333;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.form-group {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			flex-basis: 40%;
+			text-align: right;
+			margin-right: 20px;
+		}
+
+		.form-group input[type="number"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+
+		.predict-btn {
+			background-color: #00c817;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: large;
+		}
+
+		.predict-btn:hover {
+			background-color: #30261d;
+		}
+
+		.input-parameters {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #ddd;
+		}
+
+		.input-parameters h2 {
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+
+		.input-parameters p {
+			margin: 5px 0;
+		}
+
+		.result {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.result em {
+			color: #1559ce;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 47px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="logo">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2I3SqaRE4oUWY2NAZbVv59D4-0X7bWZjpKg&usqp=CAU" alt="Logo">
+				
+			</div>
+			<nav class="nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</nav>
+		</header>
+		<div class="main">
+			<h1 class="gfg">On Campus Placement Predictor</h1>
+			<h2>Only Integers Allowed, rounded-off values</h2>
+			<form action="result">
+				<div class="form-group">
+					<label for="Age"><span class="bold">Specify Age:</span></label>
+					<input type="number" name="n1" id="Age">
+				</div>
+				<div class="form-group">
+					<label for="Gender"><span class="bold">Specify Gender:</span></label>
+					<input type="number" name="n2" id="Gender">
+				</div>
+				<div class="form-group">
+					<label for="weight"><span class="bold">Your Main Stream:</span></label>
+					<input type="number" name="n3" id="weight">
+				</div>
+				<div class="form-group">
+					<label for="acceleration"><span class="bold">Did any internships?(YES/NO)</span></label>
+					<input type="number" name="n4" id="acceleration">
+				</div>
+				<div class="form-group">
+					<label for="acceleration"><span class="bold">CGPA:</span></label>
+					<input type="number" name="n5" id="acceleration">
+				</div>
+				<div class="form-group">
+					<label for="acceleration"><span class="bold">Live in Hostal?(YES/NO)</span></label>
+					<input type="number" name="n6" id="acceleration">
+				</div>
+				<div class="form-group">
+					<label for="acceleration"><span class="bold">Any Backlog(YES/NO)</span></label>
+					<input type="number" name="n7" id="acceleration">
+				</div>
+				<div style="text-align: center;">
+					<button class="predict-btn" type="submit">Predict</button>
+				</div>
+			</form>
+			<div class="result">
+				<h1><em>{{result2}}</em></h1>
+			</div>
+			<div class="input-parameters">
+				<span class="title"><strong>Input Parameters for </strong> Stream</span><br>
+				<span class="title"> Electrical And Communication: 0</span><br>
+				<span class="title"> Computer Science: 1</span><br>
+				<span class="title"> Information Technology: 2</span><br>
+				<span class="title"> Mechanical: 3</span><br>
+				<span class="title"> Electrical: 4</span><br>
+				<span class="title"> Civil: 5</span><br> </br> <br>
+				<span class="title"> <strong> Input Parameters for staying</strong> </span><br>
+				<span class="title">Living in Hostel: 1</span><br>
+				<span class="title">Not Living in Hostel: 0</span><br> </br> <br>
+                <span class="title"> <strong> YES / NO Questions:</strong> </span><br>
+				<span class="title">YES: 1</span><br>
+				<span class="title">NO: 0</span><br>
+			</div>
+			
+		</div>
+	</div>
+</body>
+
+</html>
+

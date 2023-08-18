@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mileage Predictor</title>
+	<link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/M/Mercedes-Benz-logo-E47583B444-seeklogo.com.png">
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			margin: 0 auto;
+			padding: 20px;
+			max-width: 1200px;
+		}
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 40px;
+			margin-right: 10px;
+		}
+
+		.nav {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav li {
+			margin-right: 20px;
+		}
+
+		.nav li:last-child {
+			margin-right: 0;
+		}
+
+		.nav a {
+			text-decoration: none;
+			color: #333;
+			transition: color 0.3s ease;
+		}
+
+		.nav a:hover {
+			color: #007bff;
+		}
+
+		.main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		h1, h2 {
+			font-family: "Times New Roman", serif;
+			color: #333;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.form-group {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			flex-basis: 40%;
+			text-align: right;
+			margin-right: 20px;
+		}
+
+		.form-group input[type="number"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+
+		.predict-btn {
+			background-color: #00c817;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: large;
+		}
+
+		.predict-btn:hover {
+			background-color: #30261d;
+		}
+
+		.input-parameters {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #ddd;
+		}
+
+		.input-parameters h2 {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.input-parameters p {
+			margin: 5px 0;
+		}
+
+		.result {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.result em {
+			color: #1559ce;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="logo">
+				<img src="https://seeklogo.com/images/M/Mercedes-Benz-logo-E47583B444-seeklogo.com.png" alt="Logo">
+				<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/640px-Lamborghini_Logo.svg.png">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="Logo">
+				<img src="https://w7.pngwing.com/pngs/727/56/png-transparent-scuderia-ferrari-ferrari-365-gt4-2-2-400-and-412-car-enzo-ferrari-ferrari-logo-logo-vector-ferrari.png" alt="Logo">
+				
+			</div>
+			<nav class="nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</nav>
+		</header>
+		<div class="main">
+			<h1 class="gfg">Mileage Predictor</h1>
+			<h2>Mileage Per Gallon</h2>
+			<h3>Only Integers Allowed, rounded-off values</h3>
+			<form action="result1">
+				<div class="form-group">
+					<label for="cylinders"><span class="bold">Enter no. of Cylinders:</span></label>
+					<input type="number" name="n10" id="cylinders">
+				</div>
+				<div class="form-group">
+					<label for="displacement"><span class="bold">Enter Displacement:</span></label>
+					<input type="number" name="n11" id="displacement">
+				</div>
+				<div class="form-group">
+					<label for="weight"><span class="bold">Enter Weight:</span></label>
+					<input type="number" name="n12" id="weight">
+				</div>
+				<div class="form-group">
+					<label for="acceleration"><span class="bold">Enter Acceleration:</span></label>
+					<input type="number" name="n13" id="acceleration">
+				</div>
+				<div style="text-align: center;">
+					<button class="predict-btn" type="submit">Predict</button>
+				</div>
+			</form>
+			<div class="input-parameters">
+				<h2>Input Parameters:</h2>
+				<p><strong>No. of Cylinders:</strong> Valid Options: 3, 4, 5, 6, 8</p>
+				<p><strong>Displacement:</strong> Measure of cylinder volume. Valid Range: 60 - 500</p>
+				<p><strong>Weight of Car:</strong> Valid Range: 1600 - 5200</p>
+				<p><strong>Acceleration:</strong> Valid Range: 8 - 25</p>
+			</div>
+			<div class="result">
+				<h1>The mpg score is:</h1>
+				<h2><em>{{result3}}</em></h2>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
